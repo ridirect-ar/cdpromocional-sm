@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Redirecionando...</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Pixel do Meta -->
+  <!-- Pixel do Meta: bootstrap -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){
       n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)
     };
     if(!f._fbq)f._fbq=n;
@@ -23,55 +22,45 @@
     s.parentNode.insertBefore(t,s)
     }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-    // Inicialização do Pixel
-    fbq('init', '1167839528776028'); // seu Pixel ID
-    fbq('track', 'PageView'); // evento padrão
-    fbq('track', 'ViewContent'); // evento personalizado
-  </script>
+    // 1) Inicializa o Pixel
+    fbq('init', '1167839528776028');
 
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=1167839528776028&ev=PageView&noscript=1"/>
-  </noscript>
+    // 2) Dispara PageView imediatamente ao carregar
+    fbq('track', 'PageView');
 
-  <!-- Redirecionamento após 2 segundos -->
-  <script>
-    setTimeout(() => {
+    // 3) Dispara ViewContent após pequeno delay para garantir o carregamento do script
+    setTimeout(function () {
+      fbq('track', 'ViewContent');
+    }, 500);
+
+    // 4) Redireciona para o destino final (ajuste o tempo se desejar)
+    setTimeout(function () {
       window.location.href = "http://www.suamusica.com.br/alinnereisumapressaodeforro";
     }, 2000);
   </script>
 
+  <!-- Fallback sem JS: registra PageView -->
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1167839528776028&ev=PageView&noscript=1" />
+  </noscript>
+
   <style>
-    body {
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #fafafa;
-      color: #222;
-      text-align: center;
+    :root { color-scheme: light dark; }
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      min-height: 100dvh; margin: 0;
+      display: grid; place-items: center; text-align: center;
+      padding: 24px;
     }
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
-    a {
-      color: #007bff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    a{ text-decoration: none; }
+    a:hover{ text-decoration: underline; }
   </style>
 </head>
-
 <body>
-  <h2>Estamos redirecionando você...</h2>
-  <p>Se o redirecionamento não acontecer automaticamente, 
-     <a href="http://www.suamusica.com.br/alinnereisumapressaodeforro">clique aqui</a>.</p>
+  <main>
+    <h2>Estamos redirecionando você…</h2>
+    <p>Se não acontecer automaticamente, <a href="http://www.suamusica.com.br/alinnereisumapressaodeforro">clique aqui</a>.</p>
+  </main>
 </body>
 </html>
