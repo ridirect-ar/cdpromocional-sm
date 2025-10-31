@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecionando...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Código do Pixel do Meta -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1167839528776028');
+    fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1167839528776028&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <!-- Redirecionamento após 2 segundos -->
+  <script>
+    setTimeout(() => {
+      window.location.href = "http://www.suamusica.com.br/alinnereisumapressaodeforro";
+    }, 2000);
+  </script>
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Estamos redirecionando você...</h2>
+  <p>Se não for redirecionado automaticamente, <a href="http://www.suamusica.com.br/alinnereisumapressaodeforro">clique aqui</a>.</p>
+</body>
+</html>
